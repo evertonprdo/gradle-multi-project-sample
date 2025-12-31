@@ -5,7 +5,9 @@ Check the official documentation for more: https://docs.gradle.org/current/userg
 
 ## Overview
 
-This project demonstrates how to structure a Gradle multi-project build with shared build conventions using a composite build. The `build-logic` directory contains reusable Gradle convention plugins that are applied across all subprojects, eliminating build script duplication and ensuring consistent configuration.
+This project demonstrates how to structure a Gradle multi-project build with shared build conventions using a composite
+build. The `build-logic` directory contains reusable Gradle convention plugins that are applied across all subprojects,
+eliminating build script duplication and ensuring consistent configuration.
 
 ## Project Structure
 
@@ -29,7 +31,8 @@ TaskMngr/
 
 ### Composite Build (`build-logic`)
 
-The `build-logic` directory is a **composite build** that contains reusable Gradle convention plugins. It's included in the main build via `pluginManagement` in `settings.gradle.kts`:
+The `build-logic` directory is a **composite build** that contains reusable Gradle convention plugins. It's included in
+the main build via `pluginManagement` in `settings.gradle.kts`:
 
 ```kotlin
 pluginManagement {
@@ -39,6 +42,7 @@ pluginManagement {
 ```
 
 This approach allows you to:
+
 - Define build logic once and reuse it across all subprojects
 - Version control your build conventions alongside your code
 - Avoid `buildSrc` limitations (composite builds are cached and more performant)
@@ -65,31 +69,22 @@ plugins {
 }
 ```
 
-## Module Dependencies
-
-```
-app
-├── domain
-├── data
-├── features:task
-│   ├── core
-│   └── domain
-└── features:report
-```
-
 ## Building and Running
 
 ### Build the project
+
 ```bash
 ./gradlew build
 ```
 
 ### Run the application
+
 ```bash
 ./gradlew :app:run
 ```
 
 ### Clean build
+
 ```bash
 ./gradlew clean
 ```
