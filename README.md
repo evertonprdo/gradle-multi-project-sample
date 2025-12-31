@@ -1,6 +1,7 @@
-# TaskMngr
+# Gradle Multi-Project Builds Sample
 
 A minimal sample implementation of **Gradle Multi-Project Builds** with a **composite build-logic** pattern.
+Check the official documentation for more: https://docs.gradle.org/current/userguide/multi_project_builds.html
 
 ## Overview
 
